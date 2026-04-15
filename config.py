@@ -1,37 +1,20 @@
-import torch
-import os
+"""Configuration du projet"""
 
-# Device configuration
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print(f"Using device: {DEVICE}")
+# Chemins
+DATA_DIR = "./data/mnist"
+MODEL_DIR = "./models"
 
-# Training parameters
-BATCH_SIZE = 128
+# Paramètres du modèle
+INPUT_SIZE = 28 * 28
+NUM_CLASSES = 10  # Chiffres 0-9
+HIDDEN_SIZE = 128
+
+# Paramètres d'entraînement
+BATCH_SIZE = 64
 LEARNING_RATE = 0.001
 NUM_EPOCHS = 10
-MOMENTUM = 0.9
+DEVICE = "cuda"  # ou "cpu" si pas de GPU
 
-# Model parameters
-INPUT_CHANNELS = 1
-NUM_CLASSES = 10  # 0-9 for MNIST, 47 for EMNIST
-HIDDEN_UNITS = 128
-DROPOUT_RATE = 0.5
-
-# Data paths
-DATA_DIR = './data'
-MODEL_DIR = './models'
-os.makedirs(MODEL_DIR, exist_ok=True)
-os.makedirs(DATA_DIR, exist_ok=True)
-
-# Model save path
-BEST_MODEL_PATH = os.path.join(MODEL_DIR, 'best_model.pth')
-CHECKPOINT_PATH = os.path.join(MODEL_DIR, 'checkpoint.pth')
-
-# Dataset configuration
-DATASET_TYPE = 'MNIST'  # 'MNIST' or 'EMNIST'
-VAL_SPLIT = 0.1
-TEST_SPLIT = 0.1
-
-# Logging
-PRINT_EVERY = 100
-VISUALIZE_TRAINING = True
+# Paramètres de données
+TRAIN_SPLIT = 0.8
+RANDOM_SEED = 42

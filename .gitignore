@@ -1,14 +1,12 @@
-# Data and models
-data/
-models/
-*.pth
-*.pt
-
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -22,14 +20,50 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual environments
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
 venv/
 ENV/
-env/
+env.bak/
+venv.bak/
 
 # IDE
 .vscode/
@@ -42,11 +76,54 @@ env/
 .DS_Store
 Thumbs.db
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
+# Machine Learning / Deep Learning
+*.h5
+*.pkl
+*.pickle
+*.joblib
+model_*.pth
+*.model
+checkpoint/
+logs/
+runs/
+*.weights
 
-# Plots
-*.png
-*.jpg
-*.jpeg
+# Data files (large)
+data/*.csv
+data/*.zip
+data/*.tar.gz
+*.dataset
+
+# TensorBoard
+.tensorboard/
+events.out.tfevents.*
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+settings.json
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache
+.cache/
+*.cache
+
+# Large model files
+models/*.pth
+models/*.h5
+models/*.pb
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Output results
+results/
+output/
+predictions/
